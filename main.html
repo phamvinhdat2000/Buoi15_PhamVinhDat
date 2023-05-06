@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- main css  -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card my-5 w-50 mx-auto">
+            <div class="card-header">
+                <h2 class="text-success">Bài 1: QUẢN LÝ TUYỂN SINH</h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="diem_chuan">Nhập điểm chuẩn:</label>
+                        <input type="text" class="form-control" id="diem_chuan">
+                    </div>
+                    <div class="form-group">
+                        <label for="diem_mon_1">Nhập điểm môn thứ 1:</label>
+                        <input type="text" class="form-control" id="diem_mon_1">
+                    </div>
+                    <div class="form-group">
+                        <label for="diem_mon_2">Nhập điểm môn thứ 2:</label>
+                        <input type="text" class="form-control" id="diem_mon_2">
+                    </div>
+                    <div class="form-group">
+                        <label for="diem_mon_3">Nhập điểm môn thứ 3:</label>
+                        <input type="text" class="form-control" id="diem_mon_3">
+                    </div>
+                    <div class="form-group">
+                        <label for="khuVuc">Nhập khu vực:</label>
+                        <input type="text" class="form-control" id="khuVuc">
+                    </div>
+                    <div class="form-group">
+                        <label for="doiTuong">Nhập đối tượng:</label>
+                        <input type="text" class="form-control" id="doiTuong">
+                    </div>
+                    <button type="submit" id="tinhDiemTong" class="btn btn-primary">Kết quả</button>
+                    <div class="alert alert-danger mt-3 d-none" id="tbKetqua" role="alert"> </div>
+                </form>
+            </div>
+        </div>
+        <div class="card my-5 w-50 mx-auto">
+            <div class="card-header">
+                <h2 class="text-success">Bài 2: TÍNH TIỀN ĐIỆN</h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="ten">Nhập tên:</label>
+                        <input type="text" class="form-control" id="ten">
+                    </div>
+                    <div class="form-group">
+                        <label for="soKw">Nhập số Kw:</label>
+                        <input type="text" class="form-control" id="soKw">
+                    </div>
+                    <button type="submit" id="tinhTien" class="btn btn-primary">Tính tiền điện</button>
+                    <div class="alert alert-danger mt-3 d-none" id="tbKetqua2" role="alert"> </div>
+                </form>
+            </div>
+        </div>
+        <div class="card my-5 w-50 mx-auto">
+            <div class="card-header">
+                <h2 class="text-success">Bài 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="hovaten">Nhập họ và tên:</label>
+                        <input type="text" class="form-control" id="hovaten">
+                    </div>
+                    <div class="form-group">
+                        <label for="thu_nhap">Nhập tổng thu nhập năm:</label>
+                        <input type="text" class="form-control" id="thu_nhap">
+                    </div>
+                    <div class="form-group">
+                        <label for="nguoiphuthuoc">Nhập số người phụ thuộc:</label>
+                        <input type="number" min="0" max="2" class="form-control" id="nguoiphuthuoc">
+                    </div>
+                    <button type="submit" id="tinhthuethunhap" class="btn btn-primary">Tính thuế</button>
+                    <div class="alert alert-danger mt-3 d-none" id="tbKetqua3" role="alert"> </div>
+                </form>
+            </div>
+        </div>
+        <div class="card my-5 w-50 mx-auto">
+            <div class="card-header">
+                <h2 class="text-success">Bài 4: TÍNH TIỀN CÁP</h2>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="maKH">Nhập mã khách hàng:</label>
+                        <input type="text" class="form-control" id="maKH">
+                    </div>
+                    <div class="form-group">
+                        <label for="loaiKH">Nhập loại khách hàng (ND or DN):</label>
+                        <input type="text" class="form-control" id="loaiKH">
+                    </div>
+                    <div class="form-group d-none" id="form_ketnoi">
+                        <label for="soketnoi">Nhập số kết nối:</label>
+                        <input type="text" class="form-control" id="soketnoi">
+                    </div>
+                    <div class="form-group">
+                        <label for="sokenhcaocap">Nhập số kênh cao cấp:</label>
+                        <input type="text" class="form-control" id="sokenhcaocap">
+                    </div>
+                    <button type="submit" id="tinhtiencap" class="btn btn-primary">Tính tiền cáp</button>
+                    <div class="alert alert-danger mt-3 d-none" id="tbKetqua4" role="alert"> </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap js  -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- main js  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
